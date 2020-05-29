@@ -379,6 +379,86 @@ a {
     padding-bottom: 81px;
 }
 
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate(-50%, -2000px);
+    }
+
+    50% {
+        transform: translate(-50%, -20%);
+    }
+
+    60% {
+        transform: translate(-50%, -65%);
+    }
+
+    75% {
+        transform: translate(-50%, -45%);
+    }
+
+    90% {
+        transform: translate(-50%, -55%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -2000px);
+    }
+
+    50% {
+        transform: translate(-50%, -20%);
+    }
+
+    60% {
+        transform: translate(-50%, -65%);
+    }
+
+    75% {
+        transform: translate(-50%, -45%);
+    }
+
+    90% {
+        transform: translate(-50%, -55%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-55%, -50%);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate(-45%, -50%);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-55%, -50%);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate(-45%, -50%);
+    }
+}
+
 /* Blocks */
 .modal {
     position: fixed;
@@ -1564,7 +1644,6 @@ a {
 .page__title-wraper {
     width: 1160px;
     margin: auto;
-    z-index: 100;
 }
 
 .main__content .page__title {
@@ -1627,6 +1706,242 @@ a {
 
 .breadcrumbs a:not([href]) {
     cursor: default;
+}
+
+.catalog__sections-wraper {
+    display: flex;
+    justify-content: center;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.filter__title-wraper {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 59px;
+    padding-right: 67px;
+    background-color: #d9d9d9;
+}
+
+.filter__title {
+    width: 202px;
+    margin: 0;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter__form-wraper {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-left: 55px;
+    padding-right: 70px;
+    background-color: #ebebeb;
+}
+
+.filter__form {
+    width: 201px;
+    padding-top: 69px;
+}
+
+.filter__form fieldset {
+    margin: 0;
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 36px;
+    border: none;
+}
+
+.filter__form .filter__range {
+    padding-bottom: 34px;
+}
+
+.filter__form .filter__color {
+    padding-bottom: 37px;
+}
+
+.filter__form .filter__bluetooth {
+    padding-bottom: 37px;
+}
+
+.filter__form legend {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 11px;
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.33;
+    color: #000000;
+    border-top: 2px solid #000000;
+}
+
+.filter__form label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 39px;
+    cursor: pointer;
+}
+
+.filter__range-scale-ctrl {
+    position: relative;
+    margin-bottom: 9px;
+}
+
+.filter__range-scale {
+    width: 100%;
+    height: 2px;
+    margin-top: 13px;
+    background-color: #dbdbdb;
+}
+
+.filter__range-bar {
+    width: 60%;
+    height: 2px;
+    background-color: #91c92f;
+}
+
+.filter__range-toggle {
+    position: absolute;
+    content: "";
+    top: 1px;
+    width: 4px;
+    height: 4px;
+    background-color: #ababab;
+    border: 8px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.filter__range-toggle:active {
+    border: 9px solid white;
+}
+
+.filter__range-toggle-min {
+    left: 0;
+}
+
+.filter__range-toggle-max {
+    left: 60%;
+}
+
+.filter__range-num-ctrl {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.filter__range-num-ctrl label {
+    display: inline-block;
+    width: 92px;
+    margin: 0;
+    margin-right: -4px;
+    padding: 0;
+    vertical-align: baseline;
+    text-transform: lowercase;
+}
+
+.filter__range-num-ctrl input {
+    width: 70px;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    border: none;
+    background-color: transparent;
+}
+
+.filter__form-checkbox + label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/svg/checkbox-off.svg");
+    background-repeat: no-repeat;
+    transform: translate(0, -50%);
+}
+
+.filter__form-checkbox:checked + label::before {
+    width: 27px;
+    background-image: url("../img/svg/checkbox-on.svg");
+}
+
+.filter__form-radio + label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: 4px solid #000000;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+}
+
+.filter__form-radio:checked + label::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+}
+
+.filter__form label:hover::before,
+.filter__form label:hover::after,
+.filter__form-checkbox:focus + label::before,
+.filter__form-radio:focus + label::before,
+.filter__form-radio:focus + label::after {
+    opacity: 0.6;
+}
+
+.filter___form-checkbox:active + label:before,
+.filter___form-radio:active + label:before,
+.filter___form-radio:active + label:after {
+    opacity: 1;
+}
+
+.filter__form-checkbox:disabled + label,
+.filter__form-checkbox:disabled + label::before,
+.filter__form-radio:disabled + label,
+.filter__form-radio:disabled + label::before,
+.filter__form-radio:disabled + label::after {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.filter__form-btn {
+    width: 100%;
+}
+
+.filter__form label:last-child {
+    margin-bottom: 0;
 }
 
 .page__footer {
