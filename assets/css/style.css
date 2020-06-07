@@ -1265,7 +1265,8 @@ a {
 
 .categories__item-title-monopods {
     width: 125px;
-    padding-right: 35px;
+    padding-right: 17px;
+    padding-left: 17px;
 }
 
 .categories__item-title::before {
