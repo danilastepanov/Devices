@@ -164,23 +164,23 @@ if (feedbackBtn !== null || mapOverlay !== null) {
     if (!nameInput.value || !emailInput.value || !textInput.value) {
       evt.preventDefault();
 
-      nameInput.classList.remove("modal____feedback-input-err");
-      emailInput.classList.remove("modal____feedback-input-err");
-      textInput.classList.remove("modal____feedback-input-err");
-      modalFeedback.classList.remove("modal____feedback-error");
+      nameInput.classList.remove("modal__feedback-input-err");
+      emailInput.classList.remove("modal__feedback-input-err");
+      textInput.classList.remove("modal__feedback-input-err");
+      modalFeedback.classList.remove("modal__feedback-error");
       modalFeedback.offsetWidth = modalFeedback.offsetWidth;
-      modalFeedback.classList.add("modal____feedback-error");
+      modalFeedback.classList.add("modal__feedback-error");
 
       if (!nameInput.value) {
-        nameInput.classList.add("modal___feedback-input-err");
+        nameInput.classList.add("modal__feedback-input-err");
       };
 
       if (!emailInput.value) {
-        emailInput.classList.add("modal___feedback-input-err");
+        emailInput.classList.add("modal__feedback-input-err");
       };
 
       if (!textInput.value) {
-        textInput.classList.add("modal___feedback-input-err");
+        textInput.classList.add("modal__feedback-input-err");
       };
 
     } else {
@@ -191,7 +191,7 @@ if (feedbackBtn !== null || mapOverlay !== null) {
     };
   });
 
-  // Удаление класса modal-feedback-input-err с элементов формы при фокусе
+  // Удаление класса modal__feedback-input-err с элементов формы при фокусе
 
   textInput.addEventListener("focus", function (evt) {
     textInput.classList.remove("modal__feedback-input-err");

@@ -544,7 +544,7 @@ a {
     padding-bottom: 16px;
 }
 
-.modal__feedback .modal-feedback-input-err {
+.modal__feedback .modal__feedback-input-err {
     color: rgba(70, 70, 70, 0.4);
     background-color: #f6dada;
 }
